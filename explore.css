@@ -1,0 +1,135 @@
+.design-card {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 600px;
+  cursor: pointer;
+}
+
+.design-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px #00000033;
+}
+
+.design-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.design-card:hover img {
+  transform: scale(1.05);
+}
+
+.design-card p {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #550606;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .design-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.whatsapp-button {
+  background-color: #232f3e;
+  color: white;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+ /* th image was an harixantal fix */
+
+
+.design-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  
+}
+
+.design-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px;
+
+
+ }
+
+
+.design-card {
+  background-color: white;
+  border-radius: 2px;
+  width: 220px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.design-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+/* background  */
+body{
+ background-color: #14213d;
+}
+.whatsapp-button {
+  background-color: #fca311;
+  color: #000000;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+span{
+  color: rgb(3, 4, 5);
+  background-position: 30px;
+  background-color: #ff9900;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  font-size: 30px;
+  padding: 12px 28px;
+  display: flex;
+  font-size-adjust: none;
+  
+}
+.address-box{
+
+text-shadow: #fca311;
+border-color: #fca311;
+
+}
+.section-title{
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  padding: 20px;
+
+}
+.whatsapp-button :hover{
+  color: aqua;
+}
+
