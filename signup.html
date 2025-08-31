@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - MalakFarhan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+    }
+
+    .signup-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      width: 400px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .signup-box h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .signup-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .signup-box input:focus {
+      border-color: #ff6a00;
+      box-shadow: 0 0 8px rgba(255, 106, 0, 0.4);
+    }
+
+    .signup-box button {
+      width: 100%;
+      padding: 12px;
+      background: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .signup-box button:hover {
+      background: #d45500;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Create Account</h2>
+    <input type="text" id="fullname" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirm" placeholder="Confirm Password">
+    <button onclick="signup()">Sign Up</button>
+    <p class="message" id="msg"></p>
+  </div>
+
+  <script>
+    function signup() {
+      const fullname = document.getElementById("fullname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value;
+      const confirm = document.getElementById("confirm").value;
+      const msg = document.getElementById("msg");
+
+      if (!fullname || !email || !username || !password || !confirm) {
+        msg.innerHTML = "⚠️ Please fill all fields!";
+        msg.className = "message error";
+      } else if (!email.includes("@") || !email.includes(".")) {
+        msg.innerHTML = "📧 Please enter a valid email!";
+        msg.className = "message error";
+      } else if (password.length < 4) {
+        msg.innerHTML = "🔑 Password must be at least 4 characters!";
+        msg.className = "message error";
+      } else if (password !== confirm) {
+        msg.innerHTML = "❌ Passwords do not match!";
+        msg.className = "message error";
+      } else {
+        msg.innerHTML = "✅ Signup successful! Redirecting to Login...";
+        msg.className = "message success";
+        setTimeout(() => {
+          window.location.href = "login.html"; // redirect to login
+        }, 2000);
+      }
+    }
+  </script>
+</body>
+</html>
+
+</body>
+</html>
