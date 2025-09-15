@@ -44,13 +44,16 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  border: white;
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  border: white;
+  padding: auto;
 }
 
 .nav-links li a:hover {
@@ -98,6 +101,7 @@ body {
   .nav-links {
     flex-direction: column;
     align-items: center;
+    margin: 15px;
   }
 
   .hero h1 {
@@ -157,6 +161,9 @@ body {
 .explore:hover {
   color: #1d0101;
   background-color: #e7e7da;
+   border-color: #232f3e;
+      box-shadow: 0 0 8px rgb(21, 45, 68);
+    
 }
 
 
@@ -183,30 +190,20 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
+   border-color: #007BFF;
+      border: 0 0 8px rgb(246, 247, 248);
+    
+}
+.ordernow:hover{
+   border-color: #232f3e;
+      box-shadow: 0 0 8px rgb(3, 5, 7);
+    
 }
 
-.login-btn {
-  text-align: left;
-  top: 60px;
-}
 
-.login {
-  background-color: #232f3e;
-  color: #ff9900;
-     padding: 10px 15px;
-        border-radius: 10px;
-     cursor: pointer;
-  font-weight: bold;
-}
 
-.login:hover {
-  color: #37475a;
-  background-color: #232f3e;
-}
-.dark-mode {
-  background-color: #121212;
-  color: white;
-}
+
+
 .clock-btn{
   text-align: center;
   background-color: #ff9900;
@@ -291,4 +288,32 @@ body {
 
 .phone-btn:hover {
     background-color: #218838;
+}
+/* Initial hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+/* When visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.login{
+  border-color: rgb(240, 231, 231);
+  background-color: #ff9900;
+  border-radius: 25px 25px;
+  align-items: center;
+  justify-content: center;
+  padding:  10px;
+
+}
+.login:hover{
+  color: #e0e0e0;
+  background-color: #232f3e;
+  border-color: #007BFF;
+      box-shadow: 0 0 8px rgb(246, 247, 248);
+    
 }
