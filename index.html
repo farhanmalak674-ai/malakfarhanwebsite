@@ -6,12 +6,44 @@
   <title>malakfarhan | Welcome</title>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" type="circle-logo.jpg" href="logo.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<script>
+  window.onload = function() {
+    let login = confirm("🔐 Do you want to login now?");
+    if (login) {
+      // If user clicks OK
+      window.location.href ="login.html"; // redirect to login page
+    } else {
+      // If user clicks Cancel
+      alert("Welcome! You can continue browsing without login.");
+    }
+  };
+</script>
+
 </head>
 <body>
-  
-  
+  <!-- this is your animation on  -->
+  <script>
+  function revealOnScroll() {
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", revealOnScroll);
+</script>
+
 <script src="index.js"></script>
 
   
@@ -27,9 +59,10 @@
       <nav>
         <ul class="nav-links">
           
-          <li><a href="#">About</a></li>
+          <li><a href="aboutme.html" target="_blank">About Me</a></li>
           <li><a href="#">more</a></li>
           <li><a href="#">Contact</a></li>
+         <div class="login">  <li><a href="login.html" target="_blank" style="border: 1px;">Login</a></li></div>
           <p class="clock-btn" id="clock"></p>
         </ul>
       </nav>
@@ -53,10 +86,7 @@
       <a target="_blank" href="explore.html" class="explore">Explore Now</a>
       
     </div>
-     <div class="login-btn">
-<a class="login" target="_blank" href="login.html">Login</a>
-</div>
-
+     
   </section>
   <div class="order">
     <a target="_blank" href="https://wa.me/923125384884" class="ordernow">Order Now</a>
@@ -78,4 +108,3 @@
 </footer>
 </body>
 </html>
-
